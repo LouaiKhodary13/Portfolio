@@ -4,17 +4,17 @@ import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const stats = [
-  { value: "3+", label: "Years Experience" },
-  { value: "React", label: "Primary Stack" },
-  { value: "15+", label: "Projects Built" },
+  { value: "+4", label: "Years Experience" },
+  { value: "React, Next.js, Laravel, NestJS", label: "Primary Stack" },
+  { value: "+15", label: "Projects Built" },
   { value: "8", label: "Certifications" },
 ];
 
 const highlights = [
-  "Transforming Figma designs into pixel-perfect, interactive interfaces with meticulous attention to detail.",
-  "Currently building at Risidio (London), collaborating with UI/UX teams to ship polished web products.",
-  "Deep expertise in React.js, TypeScript, Tailwind CSS, and modern component architecture.",
-  "Meta Front-End Developer Certified — 8 certifications including advanced React and UX/UI Design.",
+  "Full Stack Developer building modern web applications using React, Next.js, Laravel, NestJS, and WordPress",
+  "Experienced in designing APIs, backend systems, and database-driven architectures",
+  "Focused on performance, scalability, and clean user experiences across the stack",
+  "Meta Front-End Developer Certified — 8 certifications including advanced React and UX/UI Design",
 ];
 
 function Reveal({
@@ -37,7 +37,7 @@ function Reveal({
           observer.disconnect();
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -49,7 +49,7 @@ function Reveal({
       className={cn(
         "transition-all duration-700",
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
-        className
+        className,
       )}
     >
       {children}
@@ -59,10 +59,7 @@ function Reveal({
 
 export function AboutSection() {
   return (
-    <section
-      id="about"
-      className="relative px-4 py-32 overflow-hidden"
-    >
+    <section id="about" className="relative px-4 py-32 overflow-hidden">
       {/* Subtle background line */}
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
@@ -85,16 +82,24 @@ export function AboutSection() {
           <div className="space-y-6">
             <Reveal delay={150}>
               <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                Junior Frontend Developer based in Cairo, Egypt, with over 3 years of hands-on experience crafting dynamic web interfaces. I specialize in{" "}
-                <span className="text-foreground font-medium">React.js</span>,{" "}
-                <span className="text-foreground font-medium">TypeScript</span>, and modern CSS frameworks.
+                Full Stack Developer with over 3 years of experience building
+                modern web applications from frontend interfaces to backend
+                systems
+                <span className="text-foreground font-medium"> Next.js</span>,
+                <span className="text-foreground font-medium"> React.js</span>,
+                <span className="text-foreground font-medium"> TypeScript</span>
+                ,<span className="text-foreground font-medium"> Laravel</span>,
+                <span className="text-foreground font-medium"> NestJS</span>
               </p>
             </Reveal>
 
             <Reveal delay={200}>
               <p className="text-muted-foreground leading-relaxed">
-                I work closely with UI/UX teams to translate Figma designs into interactive, pixel-perfect web experiences. Passionate about clean code, component architecture, and continuous learning. Currently at{" "}
-                <span className="text-foreground font-medium">Risidio</span> (London), working on cutting-edge web products.
+                I work across the full development lifecycle, from transforming
+                Figma designs into responsive user interfaces to building APIs,
+                integrating databases, and developing scalable backend
+                solutions. Passionate about clean code, maintainable
+                architecture, and continuous learning
               </p>
             </Reveal>
 
@@ -131,27 +136,58 @@ export function AboutSection() {
             <Reveal delay={300}>
               <div className="p-6 rounded-2xl bg-card border border-border">
                 <div className="flex items-center gap-3 mb-4">
-                  <svg className="w-4 h-4 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <svg
+                    className="w-4 h-4 text-[#22c55e]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
                   </svg>
                   <p className="font-medium">Location</p>
                 </div>
-                <p className="text-foreground font-semibold">Cairo, Egypt</p>
-                <p className="text-sm text-muted-foreground mt-1">Open to remote opportunities worldwide</p>
+                <p className="text-foreground font-semibold">Aleppo, Syria</p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Open to remote opportunities worldwide
+                </p>
               </div>
             </Reveal>
 
             <Reveal delay={350}>
               <div className="p-6 rounded-2xl bg-card border border-border">
                 <div className="flex items-center gap-3 mb-4">
-                  <svg className="w-4 h-4 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <svg
+                    className="w-4 h-4 text-[#22c55e]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
                   </svg>
                   <p className="font-medium">Currently</p>
                 </div>
-                <p className="text-foreground font-semibold">Frontend Developer @ Risidio</p>
-                <p className="text-sm text-muted-foreground mt-1">Remote · London, UK · Feb 2024 – Present</p>
+                <p className="text-foreground font-semibold">
+                  Full Stack Developer | Freelance | Open to Work
+                </p>
+                {/* <p className="text-sm text-muted-foreground mt-1">
+                  Remote · Feb 2024 – Present
+                </p> */}
               </div>
             </Reveal>
           </div>
